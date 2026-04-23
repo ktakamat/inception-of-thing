@@ -1,0 +1,18 @@
+-start p1-
+cd ../p1
+vagrant up
+
+-check server is running-
+vagrant status
+
+-open in p1 server ktakamatS-
+cd ../p2
+vagrant scp ../p2/confs/ ktakamatS:/tmp
+
+-get into server ktakamatS-
+vagrant ssh ktakamatS
+
+-check deployment-
+k get deployment
+
+
