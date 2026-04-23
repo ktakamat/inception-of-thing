@@ -1,0 +1,24 @@
+-destroy vagrant-
+vagran destroy -f
+
+-start net.xml-
+sudo virsh net-define net.xml
+
+-start network-
+sudo virsh net-start iot-network
+
+-autostart setting-
+sudo virsh net-autostart iot-network
+
+-check nerwork is working-
+sudo virsh net-list --all
+
+-start vagrantfile-
+vagrant up
+
+-login to server-
+vagrant ssh ktakamatS
+
+-check nodes-
+k get nodes -o wide
+ 
