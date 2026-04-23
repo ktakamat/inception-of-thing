@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-username = "wil"
+username = "ktakamat"
 
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/trixie64"
