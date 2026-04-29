@@ -1,0 +1,26 @@
+-setting for the ArgoCD-
+(create app)
+Application Name: random name
+Project Name: default
+SYNC POLICY: Automatic
+Repository URL: https://github.com/lozercaustic/ktakamat-conf
+Revision: HEAD
+Path: .
+Cluster URL: https://kubernetes.default.svc
+Namespace: dev
+
+-command to run the project-
+sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+./p3.sh install_deps
+./p3.sh up
+kubectl -n argocd port-forward service/argocd-server 8443:443
+
+-Go to web browser-
+https://localhost:8443
+
+-Login-
+user: admin
+password: copy form ./p3.sh
+
+
